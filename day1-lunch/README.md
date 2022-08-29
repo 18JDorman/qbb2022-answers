@@ -43,8 +43,14 @@
  
  # Exercise 4.B
  ```
- cut -f 3 integrated_call_samples.panel | grep AFR | wc -l
- 1044
+ grep AFR integrated_call_samples.panel | cut -f 2 | sort | uniq -c
+ 123 ACB
+ 112 ASW
+ 173 ESN
+ 180 GWD
+ 122 LWK
+ 128 MSL
+ 206 YRI
  ```
  
  # Exercise 4.C
