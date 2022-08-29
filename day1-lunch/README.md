@@ -72,6 +72,5 @@
  Six times, AF, EAS_AF, EUR_AF, AFR_AF, AMR_AF, and SAS_AF
  
  # Exercise 5.F
- 
- 
+ You could extract column 8 and output that to a separate file. Then on that file you could separate values by ';' and extract whatever column that would put AFR-AF in (column 7 I believe).
  
