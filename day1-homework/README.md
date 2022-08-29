@@ -20,16 +20,16 @@
   input record number 21, file /Users/cmdb/data/vcf_files/random_snippet.vcf
   source line number 1\
  ```
+ ### Correct Code:
  ```
- Correct Code:
  for nuc in A C G T
  do
    echo "Considering " $nuc
    awk -v nucl=$nuc '/^#/{next} {if ($4 == nucl) {print $5}}' $1 | sort | uniq -c
  done
  ```
+ ### Output
  ```
- Output:
  Considering  A
   354 C
  1315 G
