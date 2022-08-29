@@ -18,3 +18,22 @@
  
  # Exercise 2 Median
  You would need to use the start and stop positions from the gene bed file as conditions to filter the exons bed file. For each gene, you would subset the exons by the number of exons in between each gene bed file range. Then you could use wc on each exon subset, output that to a file, sort that file, and take the values in the middle of the file.
+ 
+ # Exercise 3
+ sort -k 4 chromHMM.E116_15_coreMarks_hg38lift_stateno.chr21.bed | cut -f 4 | uniq -c
+  Count State
+  305 1
+   17 10
+   17 11
+   30 12
+   62 13
+  228 14
+  992 15
+  678 2
+   79 3
+  377 4
+  808 5
+  148 6
+ 1050 7
+  156 8
+  654 9
