@@ -84,7 +84,7 @@
   ### Solution 2:
   Sort the variants bed just as the genes bed was sorted.
   
-  ### Variants
+  ### Variants:
   ```
   Number of variants using wc: 10293
   Number of unique genes using cut -f 4 intersect_out_ie2.bed | sort | uniq | wc -l: 200
@@ -92,6 +92,14 @@
   ```
   
   ## Exercise 4
-  ### 
+  ### Code Summary:
+  Line one gets the intersection of genes with H3K27ac only. Line two finds intersections with just H3K9me3. Line three uses grep to exlucde entries from H3K27ac output in H3K9me3 output.
+  
+  ### Syntax:
+  The syntax error is that the bedtools functions reference files that are not in the directory where the script is operated. The solution is to include the paths into the script. The logic error is that the acetylation output is being used to exclude methylation genes but we are interested in what is only in the acetylation output. The solution is to flip the two input orders.
+  
+  ## Exercise 5
+  ###
+  
   
   
