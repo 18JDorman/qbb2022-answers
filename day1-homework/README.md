@@ -28,7 +28,7 @@
    awk -v nucl=$nuc '/^#/{next} {if ($4 == nucl) {print $5}}' $1 | sort | uniq -c
  done
  ```
- ### Output
+ ### Output:
  ```
  Considering  A
   354 C
@@ -49,4 +49,11 @@
   
   This makes biological sense as transitions are far more probable than transversions.
   ```
- 
+  ## Exercise 2
+  ### Code:
+  ```
+  grep -Ew '1|2|10|11' ~/data/bed_files/chromHMM.E116_15_coreMarks_hg38lift_stateno.chr21.bed > promoters.bed
+  bedtools intersect -a ~/data/vcf_files/random_snippet.vcf -b ./promoters.bed > intersect_out_ex2.bed
+  grep -v "#" intersect_out_ex2.bed | awk '{if ($4=="C") {print $5}}' | sort | uniq -c
+  ```
+  
