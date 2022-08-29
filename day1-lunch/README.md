@@ -74,3 +74,31 @@
  # Exercise 5.F
  You could extract column 8 and output that to a separate file. Then on that file you could separate values by ';' and extract whatever column that would put AFR-AF in (column 7 I believe).
  
+ # Just for Fun.A
+ `cut -f 4,5 random_snippet.vcf | sort | uniq -c`
+ ```
+  354 A	C
+ 1315 A	G
+  358 A	T
+  484 C	A
+  384 C	G
+ 2113 C	T
+ 2041 G	A
+  405 G	C
+  485 G	T
+  358 T A
+  1317 T C
+  386 T G
+  The most common mutation is C to T
+  ```
+ # Just for Fun.B
+ `cut -f 8 random_snippet.vcf | cut -d ';' -f 7`
+ 
+ # Just for Fun.C
+ `cut -f 8 random_snippet.vcf | cut -d ';' -f 7 | sort | uniq | wc -l`
+ There are 102 values including 0 but subtracting 19 from the output of the previous command (since the header and comments are included in the count).
+ 
+ # Just for Fun.D
+ `cut -f 8 random_snippet.vcf | cut -d ';' -f 11 | sort | uniq`
+ There is only one value for NC (2548).
+ 
