@@ -39,11 +39,39 @@
 ```
 
  # Exercise 3.C
- For each state, you would subset the bed file by lines belonging to that state. Then on each subset, you would loop through each line, take the difference between each start and stop point, and sum each of those values. Then choose the max sum.
+ For each state, you could subset the bed file by lines belonging to that state. Then on each subset, you could loop through each line, take the difference between each start and stop point, and sum each of those values. Then choose the max sum.
  
  # Exercise 4.B
  ```
  cut -f 3 integrated_call_samples.panel | grep AFR | wc -l
  1044
  ```
+ 
+ # Exercise 4.C
+ You could run uniq on a sorted column 3, output that to a list of some kind, then use a for loop to run through each list entry, and run the same grep-wc pipe for each. 
+ 
+ # Exercise 5.B
+ `cut -f 1-8,13 random_snippet.vcf > HG00100.vcf`
+ 
+ # Exercise 5.C
+ `cut -f 9 HG00100.vcf | sort | uniq -c`
+ ```
+ Count Value
+ 9514 0|0
+  127 0|1
+  178 1|0
+  181 1|1
+ ```
+ # Exercise 5.D
+ `grep AF=1 HG00100.vcf | wc -l`
+ ```
+ 34
+ ```
+ 
+ # Exercise 5.E
+ Six times, AF, EAS_AF, EUR_AF, AFR_AF, AMR_AF, and SAS_AF
+ 
+ # Exercise 5.F
+ 
+ 
  
