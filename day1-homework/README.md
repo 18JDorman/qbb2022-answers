@@ -1,8 +1,8 @@
- # QBB2022 - Day 1 - Homework Exercises Submission
+ ### QBB2022 - Day 1 - Homework Exercises Submission
  
- # Exercise 1
+ ## Exercise 1
+ #Error:
  ```
- Error:
  Considering  A
  awk: illegal field $(), name "nuc"
   input record number 21, file /Users/cmdb/data/vcf_files/random_snippet.vcf
