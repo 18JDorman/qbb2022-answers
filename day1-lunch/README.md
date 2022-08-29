@@ -51,10 +51,10 @@
  You could run uniq on a sorted column 3, output that to a list of some kind, then use a for loop to run through each list entry, and run the same grep-wc pipe for each. 
  
  # Exercise 5.B
- `cut -f 1-8,13 random_snippet.vcf > HG00100.vcf`
+ `cut -f 1-9,13 random_snippet.vcf > HG00100.vcf`
  
  # Exercise 5.C
- `cut -f 9 HG00100.vcf | sort | uniq -c`
+ `cut -f 10 HG00100.vcf | sort | uniq -c`
  ```
  Count Value
  9514 0|0
