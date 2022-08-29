@@ -63,7 +63,7 @@
   39 T
   ```
   ### Significance:
-  I took a conservative approach and chose only TSS's as those are the only that to me are unambiguously promoters. These are not well defined since most many seem to be in exact mutliples of 200. That is quite arbitrary.
+  I took a conservative approach and chose only TSS's as those are the only that to me are unambiguously promoters. These are not well defined since they are named by features but without a clear definition of what features constitute a promoter. In addition, most seem to be in exact mutliples of 200. That is quite arbitrary and is likely not relfective of natural states.
   The bias towards transitions does not seem as extreme as in the promoters as the overall genome (1:~3 instead of 1:~5) so I would hypothesize that the promoters are under greater selective pressure and are broadly more intolerant to mutation.
   
   ## Exercise 3
@@ -88,7 +88,7 @@
   ```
   Number of variants using wc: 10293
   Number of unique genes using cut -f 4 intersect_out_ie2.bed | sort | uniq | wc -l: 200
-  Variants connected: 51.5
+  Variants per gene: 51.5
   ```
   
   ## Exercise 4
