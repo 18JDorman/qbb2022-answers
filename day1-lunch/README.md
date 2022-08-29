@@ -2,24 +2,22 @@
 
  1. I’m excited to learn more python techniques for genomic analysis.
  
- # Exercise 2 Commands
+ # Exercise 2.C
+ ```
  cd ~/qbb2022-answers/day1-lunch
- 
  wc -l exons.chr21.bed
- 
  wc -l genes.chr21.bed 
- 
- # Exercise 2 Output
+ ```
  ```
  Number of lines in genes.chr21.bed=219
  Number of lines in exons.chr21.bed=13653
  Average number of exons per gene=13563/219=62.3
  ```
  
- # Exercise 2 Median
+ # Exercise 2.C
  You would need to use the start and stop positions from the gene bed file as conditions to filter the exons bed file. For each gene, you would subset the exons by the number of exons in between each gene bed file range. Then you could use wc on each exon subset, output that to a file, sort that file, and take the values in the middle of the file.
  
- # Exercise 3 Tally
+ # Exercise 3.B
  `sort -k 4 chromHMM.E116_15_coreMarks_hg38lift_stateno.chr21.bed | cut -f 4 | uniq -c`
  ```
   Count State
@@ -40,5 +38,12 @@
   654 9
 ```
 
- # Exercise 3 
+ # Exercise 3.C
+ For each state, you would subset the bed file by lines belonging to that state. Then on each subset, you would loop through each line, take the difference between each start and stop point, and sum each of those values. Then choose the max sum.
+ 
+ # Exercise 4.B
+ ```
+ cut -f 3 integrated_call_samples.panel | grep AFR | wc -l
+ 1044
+ ```
  
