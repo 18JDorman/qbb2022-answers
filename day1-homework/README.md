@@ -56,4 +56,13 @@
   bedtools intersect -a ~/data/vcf_files/random_snippet.vcf -b ./promoters.bed > intersect_out_ex2.bed
   grep -v "#" intersect_out_ex2.bed | awk '{if ($4=="C") {print $5}}' | sort | uniq -c
   ```
+  ### Output:
+  ```
+  12 A
+  11 G
+  39 T
+  ```
+  ### Significance:
+  These are not well defined since most many seem to be in exact mutliples of 200. That is quite arbitrary so they are likely not well defined.
+  The bias towards transitions does not seem as extreme as in the promoters as the overall genome (1:~3 instead of 1:~5) so I would hypothesize that the promoters are under greater selective pressure and are broadly more intolerant to mutation.
   
