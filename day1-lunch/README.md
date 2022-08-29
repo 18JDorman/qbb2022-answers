@@ -21,6 +21,7 @@
  
  # Exercise 3
  sort -k 4 chromHMM.E116_15_coreMarks_hg38lift_stateno.chr21.bed | cut -f 4 | uniq -c
+ ```
   Count State
   305 1
    17 10
@@ -37,3 +38,4 @@
  1050 7
   156 8
   654 9
+```
