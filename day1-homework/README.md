@@ -87,7 +87,7 @@
   ### Variants:
   ```
   Number of variants using wc: 10293
-  Number of unique genes using cut -f 4 intersect_out_ie2.bed | sort | uniq | wc -l: 200
+  Number of unique genes using cut -f 7 intersect_out_ex2.bed | sort | uniq | wc -l: 200
   Variants per gene: 51.5
   ```
   
