@@ -97,3 +97,4 @@
   
   ### Syntax:
   The syntax error is that the bedtools functions reference files that are not in the directory where the script is operated. The solution is to include the paths into the script. The logic error is that the acetylation output is being used to exclude methylation genes but we are interested in what is only in the acetylation output. The solution is to flip the two input orders. 
+
