@@ -34,5 +34,6 @@
 			Loop through the vcf subsetted file and isolate the allele count values for each SNP.
 			Use numpy to log transform that data and then use matplotlib hist() to plot a histogram of that data in a probabiity density.
 			Save that figure as a separate file for each gene feature. 
+ ```
 
 
