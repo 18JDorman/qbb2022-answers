@@ -19,7 +19,7 @@ ac = np.log1p(ac)
 fig, ax = plt.subplots()
 ax.hist( ac, density=True)
 ax.set_ylabel("Probability Density")
-ax.set_xlabel("Allele Count")
+ax.set_xlabel("log(Allele Count + 1)")
 ax.set_title("Distribution of Log Transformed SNP Allele Counts")
 fig.savefig( vcf + ".png" )
 
