@@ -22,7 +22,7 @@
  USAGE
  	bash do_all.sh <VCF file> <GTF file>
  DESCRIPTION
- 	```
+```
 	1. Check for presence of VCF and GTF files and provide error message if not present
     2. Generate a BED file of the relevant gene features from the GTF file
 			Isolate genomic region of interest (eg. chromosome 21) from the GTF file and output to a new GTF file.
