@@ -17,3 +17,22 @@
  The vast majority of SNPs are rare regardless of what type of gene it's present in. 
  
  ## Exercise 3
+ SYNOPSIS
+ 	Contains scripts to plot the probability of alleles present in given types of genes in specified regions of a genome.
+ USAGE
+ 	bash do_all.sh <VCF file> <GTF file>
+ DESCRIPTION
+ 	```
+	1. Check for presence of VCF and GTF files and provide error message if not present
+    2. Generate a BED file of the relevant gene features from the GTF file
+			Isolate genomic region of interest (eg. chromosome 21) from the GTF file and output to a new GTF file.
+			Provide the gene features of interest in the for loop then isolate the lines containing those "gene_type"s from the GTF file. 
+			Convert that data to a bed file using awk.
+	3. Use bedtools to calculate and print the size of the genome that each gene feature of interest covers. 
+			Then subset the vcf file for the SNPs that occur in the gene features of interest also using bedtools.
+	4. For each gene feature, plot the probability density of SNPs occuring in each gene feature of interest.
+			Loop through the vcf subsetted file and isolate the allele count values for each SNP.
+			Use numpy to log transform that data and then use matplotlib hist() to plot a histogram of that data in a probabiity density.
+			Save that figure as a separate file for each gene feature. 
+
+
