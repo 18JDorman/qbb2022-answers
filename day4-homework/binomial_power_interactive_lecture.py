@@ -98,8 +98,8 @@ for i, prob in enumerate(probabilities):
 fig, ax = plt.subplots()
 pallette = sns.color_palette("crest", as_cmap=True)
 ax = sns.heatmap(new_twodim_arr_noCor, vmin = 0, vmax = 1, cmap = pallette, xticklabels = tosses, yticklabels = probabilities)
-ax.set_ylabel("Number of Tosses")
-ax.set_xlabel("Probability of Heads")
+ax.set_xlabel("Number of Tosses")
+ax.set_ylabel("Probability of Heads")
 ax.set_title("Toss vs Probability on Power with no P-Value Correction")
 fig.savefig("NoPValCor.png")
 
