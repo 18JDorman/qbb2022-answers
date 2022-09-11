@@ -30,7 +30,7 @@
  `show-coord out.delta`
  
  # Question 3.3
- There is 1 insertion in the assembly.
+ There is 1 insertion and 15 deletions in the assembly.
  
  # Question 4.1
  The large insertion is from 26788 to 27497 (ref 26790-26787).
