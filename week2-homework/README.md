@@ -1,0 +1,1 @@
+There are 9 gaps in the amino acid alignment (all in the first sequence) which has an alginment score of 3801. There are 46 gaps in sequence 1 and 77 in sequence 2 of the nucleotide alignment with an alignment score of 266300.
