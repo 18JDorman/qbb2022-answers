@@ -14,8 +14,8 @@ for each in vcf[1:]:
         depth.append(thing[4])
         qual.append(thing[1])
     freq.append(each[7]['AF'])
-    eff_dic=each[7]['ANN']
-    effs=eff_dic.split('|')
+    eff_ent=each[7]['ANN']
+    effs=eff_ent.split('|')
     eff.append(effs[2])
 
 eff_dic = {}

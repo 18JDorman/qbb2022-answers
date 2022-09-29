@@ -10,7 +10,7 @@ do
 done
 
 # Step 4
-freebayes -f sacCer3.fa --genotype-qualities -p 4 *.bam > yeast.vcf
+freebayes -f sacCer3.fa --genotype-qualities -p 1 *.bam > yeast.vcf
 
 # Step 5
 vcffilter -f "QUAL > 20" yeast.vcf > yeast_filt.vcf
