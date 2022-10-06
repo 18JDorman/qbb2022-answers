@@ -24,7 +24,7 @@ for each in eff:
         eff_dic[each] += 1
     else:
         eff_dic[each] = 1
-    
+
 depth = [int(d) for d in depth if d != '.']
 qual = [float(d) for d in qual if d != '.']
 freq = [float(d) for d in freq if d != '.']
