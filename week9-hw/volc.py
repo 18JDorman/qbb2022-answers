@@ -62,13 +62,13 @@ for each in range(fpkm_values_2d_log.shape[0]):
 
 fig, ax = plt.subplots()
 sm.qqplot(np.array(pvals), dist=stats.uniform, line='45')
-plt.show()
+#plt.show()
 
 fdrs = multitest.multipletests(pvals, alpha=0.1, method='fdr_bh')
 pvals = fdrs[0]
 sigs = fpkm_values_2d_sub[pvals]
 
-pvals2 = []
+pvals_list2 = []
 betas2 = []
 for each in range(fpkm_values_2d_log.shape[0]):
     tuples = []
@@ -83,25 +83,20 @@ for each in range(fpkm_values_2d_log.shape[0]):
     fit = smf.ols('fpkm ~ stage', data = big_df).fit()
     p_val2 = fit.pvalues['stage']
     beta2 = fit.params['stage']
-    pvals2.append(p_val2)
+    pvals_list2.append(p_val2)
     betas2.append(beta2)
 
 fdrs2 = multitest.multipletests(pvals, alpha=0.1, method='fdr_bh')
 pvals2 = fdrs2[0]
 sigs2 = fpkm_values_2d_sub[pvals2]
 
-commons = set(sigs) & set(sigs2)
-num_transcripts = len(commons)
-num_trans_nosex = len(sigs)
-comparison = num_transcripts / num_trans_nosex * 100
-
 colors = []
 for each in pvals2:
     if each == True:
-        colors.append('red')
-    else:
         colors.append('black')
+    else:
+        colors.append('red')
 
 fig, ax = plt.subplots()
-ax.scatter(betas2, -np.log10(pvals2), color = colors)
-plt.show()
+ax.scatter(betas2, -np.log10(pvals_list2), color = colors)
+#plt.show()
