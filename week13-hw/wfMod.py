@@ -17,35 +17,35 @@ def wf_sim(al_freq, pop):
 allele=wf_sim(0.9, 1000)
 
 #Step 2
-# def lineplot(allele):
-#     x=range(len(allele))
-#     plt.plot(x, allele)
-#     plt.xlabel('Generation')
-#     plt.ylabel('Allele Frequency')
-#     plt.title('Allele Frequency of 0.9 and Population of 1000')
-#     plt.show()
-#
-# lineplot(allele)
+def lineplot(allele):
+    x=range(len(allele))
+    plt.plot(x, allele)
+    plt.xlabel('Generation')
+    plt.ylabel('Allele Frequency')
+    plt.title('Allele Frequency of 0.9 and Population of 1000')
+    plt.show()
+
+lineplot(allele)
 
 #Step 3
-# sims = []
-# for each in range(1000):
-#     sims.append(len(wf_sim(0.5, 100)))
-#
-# plt.hist(sims)
-# plt.xlabel('Generations to Fix')
-# plt.ylabel('Count')
-# plt.show()
+sims = []
+for each in range(1000):
+    sims.append(len(wf_sim(0.5, 100)))
+
+plt.hist(sims)
+plt.xlabel('Generations to Fix')
+plt.ylabel('Count')
+plt.show()
 
 #Step 4
-# fix_time = []
-# x=[100, 1000, 10000, 100000, 1000000, 10000000]
-# for each in x:
-#     fix_time.append(len(wf_sim(0.5, each)))
-# plt.plot(x, fix_time)
-# plt.xlabel('Population')
-# plt.ylabel('Time to Fix')
-# plt.show()
+fix_time = []
+x=[100, 1000, 10000, 100000, 1000000, 10000000]
+for each in x:
+    fix_time.append(len(wf_sim(0.5, each)))
+plt.plot(x, fix_time)
+plt.xlabel('Population')
+plt.ylabel('Time to Fix')
+plt.show()
 
 #Step 5
 df = {'AlFreq': [], 'FixTimes': []}
