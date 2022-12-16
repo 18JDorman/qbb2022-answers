@@ -23,3 +23,38 @@ grep '>' bins_dir/bin.6.fa | wc -l
 ```
 3C: It makes sense given the fact that prokaryotic genomes are generally quite small. 
 3D: One way is to count the number of contigs since fewer contigs correspond to more complete assemblies. To look for contamination, we could BLAST the assemblies and look at the diversity of hits.
+```
+for each in $(grep '>' bins_dir/bin.1.fa | sort | uniq | cut -c2-)
+do
+grep $each KRAKEN/assembly.kraken
+done
+for each in $(grep '>' bins_dir/bin.2.fa | sort | uniq | cut -c2-)
+do
+grep $each KRAKEN/assembly.kraken
+done
+for each in $(grep '>' bins_dir/bin.3.fa | sort | uniq | cut -c2-)
+do
+grep $each KRAKEN/assembly.kraken
+done
+for each in $(grep '>' bins_dir/bin.4.fa | sort | uniq | cut -c2-)
+do
+grep $each KRAKEN/assembly.kraken
+done
+for each in $(grep '>' bins_dir/bin.5.fa | sort | uniq | cut -c2-)
+do
+grep $each KRAKEN/assembly.kraken
+done
+for each in $(grep '>' bins_dir/bin.6.fa | sort | uniq | cut -c2-)
+do
+grep $each KRAKEN/assembly.kraken
+done
+```
+4A: 
+bin1=Staphylococcus aureus
+bin2=Staphylococcus epidermidis
+bin3=most likely taxa in family Peptoniphilaceae (genus Clostridium is plausible)
+bin4=most likely taxa in genus Staphylococcus (Staphylococcus haemolyticus is probable)
+bin5=Cutibacterium avidum
+bin6=Enterococcus faecalis
+4B:
+Use commandline tBLASTx against a metagenomic database.
